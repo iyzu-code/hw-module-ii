@@ -1,0 +1,121 @@
+* {
+  font-family: 'Courier New', Courier, monospace;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ====== WRAPPER ====== */
+.container {
+  width: 100%;
+  max-width: 600px;  /* semua elemen sejajar */
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ====== HEADER ====== */
+header {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+header nav ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+header h1 {
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* ====== SCOREBOARD ====== */
+.scoreboard {
+  margin: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.score-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.reset-score {
+  padding: 6px 12px;
+  background: gray;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.reset-score:hover {
+  background: rgb(185, 185, 185);
+}
+
+/* ====== GAME BOARD ====== */
+.game-board {
+  width: 100%;
+  max-width: 600px;
+  margin: 20px auto 100px auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.box {
+  aspect-ratio: 1 / 1; /* agar selalu persegi */
+  border: 1px solid #D3D3D3;
+  background-color: #F5F5F5;
+  font-size: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.box:hover {
+  background-color: #ddd;
+}
+
+footer {
+    font-size: 13px;
+  position: fixed;
+  bottom: 0;
+  background-color: #444;
+  color: white;
+  padding: 5px 0;
+  width: 100%;
+  text-align: center;
+  max-width: 560px;
+  transform: translateX(-50%); /* geser agar rata tengah */
+  left: 50%;
+  border: solid #444;
+}
+
+footer strong {
+  color: yellow;
+}
+
+/* ====== PEMAIN ====== */
+.player-X { color:#00bcd4; }
+.player-O { color:#ff4081; }
+
+.menang {
+  background: #4caf50 !important;
+  color: #fff !important;
+  transform: scale(1.05);
+}
