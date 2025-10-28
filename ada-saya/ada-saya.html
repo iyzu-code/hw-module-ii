@@ -1,1 +1,53 @@
-IN PROGRESS
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="style/ada-saya.css"/>
+  <title>ADA SAYA by IYZU</title>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <nav>
+        <ul>
+          <li><a href="../index.html" class="back-btn">BACK</a></li>
+          <li><a href="https://github.com/iyzu-code/hw-module-ii" target="_blank">GIT REPO</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <div class="title">
+        <h1>ADASAYA</h1>
+        <h3>bunga rendah hanya 0,003%</h3>
+      </div>
+
+      <div class="simulation">
+        <h3>SIMULASI PINJAMAN</h3>
+        <form id="loanForm" novalidate>
+          <div class="input">
+            <label for="principal">Jumlah pinjaman</label>
+            <span class="currency">Rp <input type="number" name="principal" id="principal" min="0" required></span>
+
+            <label for="tenor">Tenor pinjaman</label>
+            <select name="tenor" id="tenor" required>
+              <option value="">Pilih tenor</option>
+              <option value="1">1 bulan</option>
+              <option value="6">6 bulan</option>
+              <option value="12">12 bulan</option>
+              <option value="24">24 bulan</option>
+              <option value="60">60 bulan</option>
+            </select>
+          </div>
+
+          <button type="submit" class="submit">Hitung Cicilan</button>
+        </form>
+      </div>
+    </main>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="apps/script.js"></script>
+</body>
+</html>

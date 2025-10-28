@@ -1,0 +1,111 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #ECF4E8;
+  min-height: 100vh;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  margin: 15px 0;
+}
+
+header nav ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: black;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+
+.title {
+  text-align: center;
+}
+
+.simulation {
+  background: #ABE7B2;
+  padding: 25px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.input {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.currency {
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  padding: 0 8px;
+  gap: 10px;
+}
+
+.currency input {
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 8px;
+}
+
+input, select {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button.submit {
+  margin: 20px 0;
+  width: 100%;
+  padding: 10px;
+  background-color: #5aa0ad;
+  border: none;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button.submit:hover {
+  background-color: #93BFC7;
+}
+
+@media (max-width: 768px) {
+  main {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
