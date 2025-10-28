@@ -37,7 +37,7 @@ function handleClick(box, index) {
 
     board[index] = currentPlayer
     box.textContent = currentPlayer
-    box.classList.add(`player-${currentPlayer}`);
+    box.classList.add(`player-${currentPlayer}`)
 
     if (checkWinner()) {
         if (currentPlayer === 'X') {
@@ -56,9 +56,7 @@ function handleClick(box, index) {
 }
 
 function checkWinner() {
-    const winCombos = [
-        [0,1,2], [3,4,5], [6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[2,4,6]
-    ]
+    const winCombos = [ [0,1,2], [3,4,5], [6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[2,4,6] ]
 
     for (let combo of winCombos) {
         const [a,b,c] = combo
@@ -71,19 +69,19 @@ function checkWinner() {
 }
 
 function highlightWinner(combo) {
-    combo.forEach(i => boxes[i].classList.add('menang'));
+    combo.forEach(i => boxes[i].classList.add('menang'))
 }
 
 function updateScore() {
-    scoreX.textContent = scoreXVal;
-    scoreO.textContent = scoreOVal;
+    scoreX.textContent = scoreXVal
+    scoreO.textContent = scoreOVal
 }
 
 function resetBoard() {
     board = Array(9).fill(null)
     boxes.forEach(box => {
         box.textContent = ''
-        box.classList.remove('player-x', 'player-y', 'menang')
+        box.classList.remove('player-X', 'player-O', 'menang')
     })
     currentPlayer = 'X'
 }
@@ -96,7 +94,7 @@ function showResetScoreAlert() {
         toast: true,
         timer: 2000,
         showConfirmButton: false
-    });
+    })
 }
 
 function showBoxFilledAlert() {
@@ -107,7 +105,7 @@ function showBoxFilledAlert() {
         toast: true,
         timer: 1000,
         showConfirmButton: false
-    });
+    })
 }
 
 function showWinAlert(player) {
@@ -117,8 +115,13 @@ function showWinAlert(player) {
         position: 'bottom',
         toast: true,
         timer: 2000,
-        showConfirmButton: false
-    }).then(resetBoard);
+        showConfirmButton: false,
+        backdrop: `
+            url("sources/winner.gif")
+            left
+            no-repeat
+        `
+    }).then(resetBoard)
 }
 
 function showDrawAlert() {
@@ -129,5 +132,5 @@ function showDrawAlert() {
         toast: true,
         timer: 2000,
         showConfirmButton: false
-    }).then(resetBoard);
+    }).then(resetBoard)
 }

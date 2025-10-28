@@ -2,7 +2,6 @@
   font-family: 'Courier New', Courier, monospace;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 .container {
@@ -102,8 +101,13 @@ footer strong {
   color: yellow;
 }
 
-.player-X { color:#00bcd4; }
-.player-O { color:#ff4081; }
+.player-X { 
+  color:#00bcd4; 
+}
+
+.player-O { 
+  color:#ff4081; 
+}
 
 .menang {
   background: #4caf50 !important;
