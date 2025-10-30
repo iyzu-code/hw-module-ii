@@ -67,7 +67,8 @@ header h1 {
   max-width: 600px;
   margin: 20px auto 100px auto;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
   gap: 10px;
 }
 
